@@ -1,3 +1,3 @@
 Reading
 =======
-Points noted from various books articles.
+Points noted from various books/articles.
