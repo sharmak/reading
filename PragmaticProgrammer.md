@@ -27,6 +27,68 @@ Prgamatic Philosophy
     - Make it look good
     Involve your audience
     Get back to people
+A Prgamatic Approach
+--------------------
+  - The Evils of duplication
+    - DRY Don't Repeat Yourself
+    - Imposed duplication
+    - Documentation and code
+      - Language Issue - header files are copied in c++
+      - Inadvertent Duplication
+        - Because of design mistake e.g. having an attribute as age when dob is already stored
+      - Impatientplicaton
+    - Interdeveloper Duplication
+      - Make it easy to reuse
+  - Orthogonality 
+    - Non orthogonal system  e.g. helicoper controls
+    - Eliminate effect between unrelated stuff
+    - This reduces risk e.g. if a module is sick, it is less likely to spread disease
+    - Project team should be orthogonal except infrastructure team like database etc.
+    - Keep your code decoupled
+    - Avoid global data
+    - Avoid similar functions
+  - Reversibility 
+    - Nothing is more dangerous than an idea if it's only one you have
+    - There are no final decisions
+    - Flexible architecture
+    - Tracer bullets (Ready, fire, aim)
+      - Use tracer bullets to find the target
+      - Advantages 
+        - Users get to see something working early
+        - Developers build a structure to work in
+        - You have an integration platform
+        - You will have something to demonstrate
+        - You have a better feel for progress
+    - Tracer Bullet vs Prototype
+      - Prototype are generally thrown after requirements are finalized and you recode it.
+      - We can create a prototype using GUI tools
+      - In tracer bullet you try to build up things.
+      - Prototype are cheaper than full production code
+      - Things to prototype
+        - Architecture
+        - New functionality in existing system
+        - Structure or contents of external data
+        - third party tools
+        - performance issues
+        - user interface design
+      - How to use prototype 
+        - Correctness
+        - Completeness
+        - Robustness
+        - Style
+      - Prototyping architecture 
+        - Are the responsibility of major componenets well defined and appropriate ?
+        - Are the collaboration between major components are well defined ?
+        - Is coupling minimized ?
+        - Can you identify potential source of duplication ?
+        - Are the interface definition and contraints acceptable ?
+    - Domain Languages
+      - Program close to the problem domain
+      - Implement a mini language
+      - Stand Alone and embedded language
+    - Estimating 
+      - Estimate to avoid suprises
+      - How accurate is enough ?
     
   
 
