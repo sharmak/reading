@@ -76,4 +76,16 @@ Simple Forecasting Methods
     - The amount of change over time (called the drift) is set to be the average change seen in the historical data. 
     - y(n+h) = y(n) + h * (y(t) - y(1))  
 
-  
+Simple Linear Regression
+------------------------
+  - Forecast and predictor variables are related using linear model
+  - y = b0 + b1*x + E
+    - bo - Intercept (Value of y when x is zero)
+    - b1 - Slope (Change in Y for unit change in X)
+    - E - Error Term (Dievation from underlying model)
+  - Error term should have couple of properties
+    - have mean zero; otherwise the forecasts will be systematically biased.
+    - are not autocorrelated; otherwise the forecasts will be inefficient as there is more information to be exploited in the data.
+    - are unrelated to the predictor variable; otherwise there would be more information that should be included in the systematic part of the model.
+  - Another important assumption in the simple linear model is that x is not a random variable.
+  - With observational data (including most data in business and economics) it is not possible to control the value of x, and hence we make this an assumption.
