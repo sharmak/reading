@@ -25,11 +25,34 @@ Combination of time series and explainotory models
 
   ED(t+1) = f(current temperature, time of work, weekday, hour, ED(t), error)
 
-Explainatory vs Time series Models:
+Explainatory vs Time series Models
 ----------------------------------
   - Explainatory variables take into account external factors while time series model depend only on historical values
   - Some time it is hard to find the exact relationship 
   - It is necessary for forecast predictor variable in explainatory models
   - We might have predict the value not explain why ?
   - Time series models might be accurate than explainatory models.
+
+Time series patterns
+--------------------
+  - Trend - Long term increase or decrease in data
+  - Seasonality - time series is effected by day of the year or particular season
+  - Cycle - A cycle occurs when the data exhibit rises and falls that are not of a fixed period.
+Plots
+------
+  - Seasonal plots
+  - Scatter plots
+  - Scatter plot matrices
+
+Univariate Statistics
+----------------------
+  - Mean 
+  - Median
+  - Mode
+  - Percentiles
+Bivariate Statistics
+---------------------
+  - Correlation cofficents (r) - Values range between +1 and  -1
+  - Autocorrelation - Show the correlation of of time series with its lag (k) e.g r(k) will be the correlation between t(i) and t(i-k) 
+
   
