@@ -50,9 +50,17 @@ Univariate Statistics
   - Median
   - Mode
   - Percentiles
+  
 Bivariate Statistics
 ---------------------
   - Correlation cofficents (r) - Values range between +1 and  -1
-  - Autocorrelation - Show the correlation of of time series with its lag (k) e.g r(k) will be the correlation between t(i) and t(i-k) 
+  - Autocorrelation 
+    - Show the correlation of of time series with its lag (k) e.g r(k) will be the correlation between t(i) and t(i-k)
+    - You can use correlogram (using acf in R) to see the auto-correlation
+  - White Noise
+    - Series with no auto correlation is white noise. 
+    - we expect 95% of the spikes in the ACF to lie within ±2/sqrt(t) where T is the length of the time series.
+    - e.g for T=50 and the bounds are at ±2/sqrt(50) = ±0.28. All autocorrelation coefficients lie within these limits to confirm that data is a white noise.
+    - 
 
   
