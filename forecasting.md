@@ -59,8 +59,21 @@ Bivariate Statistics
     - You can use correlogram (using acf in R) to see the auto-correlation
   - White Noise
     - Series with no auto correlation is white noise. 
-    - we expect 95% of the spikes in the ACF to lie within ±2/sqrt(t) where T is the length of the time series.
-    - e.g for T=50 and the bounds are at ±2/sqrt(50) = ±0.28. All autocorrelation coefficients lie within these limits to confirm that data is a white noise.
-    - 
+    - We expect 95% of the spikes in the ACF to lie within ±2/sqrt(t) where T is the length of the time series.
+    - for examples T=50 and the bounds are at ±2/sqrt(50) = ±0.28. All autocorrelation coefficients lie within these limits to confirm that data is a white noise.
+    
+Simple Forecasting Methods
+--------------------------
+  - Average Method
+    - Forecast for all future values is equal to the average/mean of historical data
+    - y(t+h|t) = (y(1) + y(2) + .. + y(n) ) / n
+  - Naive Method
+    - Use the last observed value as forecast
+  - Seasonal Naive Method
+    - Use the last observed value in the last year of the same month
+  - Drift Method
+    - Method is similar to naive method except the values are increased/decreased by drift factor.
+    - The amount of change over time (called the drift) is set to be the average change seen in the historical data. 
+    - y(n+h) = y(n) + h * (y(t) - y(1))  
 
   
