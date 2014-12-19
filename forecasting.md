@@ -94,3 +94,4 @@ Simple Linear Regression
   - The forecast values of y obtained from the models are called fitted values 
   - The difference between forecasted values and actual value is called is Residuals.
   - error(i) = y(i) - yfcst(i)
+  - Properties:  sum(error(i)) = 0 and sum(error(i) * x(i) ) = 0
