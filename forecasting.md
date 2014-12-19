@@ -124,3 +124,16 @@ Residual standard error: 0.4703 on 132 degrees of freedom
 Multiple R-squared: 0.8244,     Adjusted R-squared: 0.823
 F-statistic: 619.5 on 1 and 132 DF,  p-value: < 2.2e-16
 ```
+  - In the above output, we can write Carbon = -0.23 * City + 12.53
+  - b0 = 12.53 indicates that if miles per gallon is zero (ie. x is zero) the value of Carbon emission is 12.53. This doesn't make sense in this case as car can't have zero miles per gallon.
+  - b1 = -0.23 indicates that if the mpg (x) increase by 1 unit than carbon content decreases by -0.22 which means that as the mpg for car increases, carbon emission comes down.
+  
+Evaluating Regression Model
+---------------------------
+  - Residuals actual(y) - observed(y) 
+  - It might be good to look at the plot of residuals and preditor variable(x).
+  - We shouldn't note any pattern in the scatterplot i.e. the values should be randomly distributed.
+  - Non Linear pattern may indicate
+      - non-linear relationship
+      - heteroscedasticity (Residuals show non-constant variance)
+      - there is some left over serial correlation 
