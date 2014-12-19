@@ -134,6 +134,13 @@ Evaluating Regression Model
   - It might be good to look at the plot of residuals and preditor variable(x).
   - We shouldn't note any pattern in the scatterplot i.e. the values should be randomly distributed.
   - Non Linear pattern may indicate
-      - non-linear relationship
+      - Non-linear relationship
       - heteroscedasticity (Residuals show non-constant variance)
       - there is some left over serial correlation 
+  - Observations that take on extreme values compared to the majority of the data are called “outliers”. 
+  - Observations that have a large influence on the estimation results of a regression model are called “influential observations
+  - Goodness of fit (R^2) : R^2 refers to the variation of forecast variable explained by the model. 
+  - R^2 is square of the cofficent of correlation between observed y values and predicted y values.
+  - R^2 has value between 0 and 1.
+  - Validating a model’s out-of-sample forecasting performance is much better than measuring the in-sample R2 value.
+  - Standard error of regression is the standard dievation the residuals. 
