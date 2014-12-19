@@ -89,3 +89,8 @@ Simple Linear Regression
     - are unrelated to the predictor variable; otherwise there would be more information that should be included in the systematic part of the model.
   - Another important assumption in the simple linear model is that x is not a random variable.
   - With observational data (including most data in business and economics) it is not possible to control the value of x, and hence we make this an assumption.
+  - There are many ways of finding b0 and b1 each giving out a different line. We try to find the line which minimizes square of dievation from actual values. This process is called least square estimation. 
+  - Minimize {y(i) - b0 - b1*x(i)} ^ 2 for least squre estimation
+  - The forecast values of y obtained from the models are called fitted values 
+  - The difference between forecasted values and actual value is called is Residuals.
+  - error(i) = y(i) - yfcst(i)
