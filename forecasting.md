@@ -106,4 +106,21 @@ Regression and Correlation
     - r    - correlation cofficents
   - Correlation and regression are strongly linked
   - Regression assertion a predictive relationship between variables (e.g. x predicts y) but correlation doesn't.
-  - 
+
+Interpreting R Output
+---------------------
+```R
+fit <- lm(Carbon ~ City, data=fuel)
+abline(fit)
+> summary(fit)
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)
+(Intercept) 12.525647   0.199232   62.87   <2e-16 ***
+City        -0.220970   0.008878  -24.89   <2e-16 ***
+---
+Signif. codes:  0 *** 0.001 ** 0.01 * 0.05 . 0.1   1
+
+Residual standard error: 0.4703 on 132 degrees of freedom
+Multiple R-squared: 0.8244,     Adjusted R-squared: 0.823
+F-statistic: 619.5 on 1 and 132 DF,  p-value: < 2.2e-16
+```
