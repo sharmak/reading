@@ -95,3 +95,15 @@ Simple Linear Regression
   - The difference between forecasted values and actual value is called is Residuals.
   - error(i) = y(i) - yfcst(i)
   - Properties:  sum(error(i)) = 0 and sum(error(i) * x(i) ) = 0
+
+Regression and Correlation
+--------------------------
+  - Correlation cofficents measure the strength and direction (positive and nagative) between two variables.
+  - Slope b1 = r * s(x) / s(y)
+    - b1 - slope in regression
+    - s(x) - standard dievation of x
+    - s(y) - standard dieevation of y
+    - r    - correlation cofficents
+  - Correlation and regression are strongly linked
+  - Regression assertion a predictive relationship between variables (e.g. x predicts y) but correlation doesn't.
+  - 
