@@ -91,5 +91,41 @@ A Prgamatic Approach
     - Estimate to avoid suprises
     - How accurate is enough ?
     
+The Basic Tools
+---------------
+  - Power of Plain Text
+    - Keep knowledge in plain text
+    - Insurance against obsolescence
+    - Leverage 
+  - Shell Games 
+    - find . -name '*.c' -newer Makfile -print
+    - find . -name '*.java' -mtime +7 -print | xargs grep 'java.awt'
+    - Use power of shell commands
+    - You can use unix command in windows using power shell.
+  - Power Editing
+    - One editior
+    - Pick a powerful editor and learn it well
+    - Try to reduce the keystrokes whereever possible
+  - Source Code Control
+    - Always use source code control
+  - Debugging 
+    - Fix the problem, not the blame
+    - Don't panic
+    - Visulaize your data
+    - Tracing 
+    - Rubber Ducking - Try to explain problem to fellow programmer
+    - Process of elimination - "select" is n't broken
+    - Element of surprise - Don't Assume It - Prove It
+  - Text Manipulation
+    - Learn a text manipulation language
+    - We can use text manipulation language 
+      - Database schema maintenance
+      - Java Property access
+      - Documentation generation
+      - Test data generation
+  - Code Generator
+    - Passive code generator are run once e.g. change the format from a to b
+    - Active code generator reproduce the new file each time it is ran e.g. swig
+    - Active code generator need't be complex.
   
 
