@@ -144,3 +144,41 @@ Evaluating Regression Model
   - R^2 has value between 0 and 1.
   - Validating a model’s out-of-sample forecasting performance is much better than measuring the in-sample R2 value.
   - Standard error of regression is the standard dievation the residuals. 
+Forecasting with Linear Regression
+----------------------------------
+  - We have following equation y = b0*x + b1 
+      - To obtain the forecast for a new value of x, we put the value of x in the equation
+      - The newly obtained value of y is called fitted value.
+      - You have error in the forecast which can be calcualted by assuming that forecast are normally distributed (1.96 sd - 95% 1.28 sd - 80% )
+Hypothesis Testing
+------------------
+  - Explore whether there is enough evidence that x and y are related.
+  - Hyposthesis testing is used to explore the above fact e.g. x and y are related
+  - We do a test to see if it is possible to have b1 = 0 for the observed data
+  - We start with null hypostheis (thing which we want to disprove) that x and y are unrelated ie H0 => b1 = 0
+  - Evidence against the null hypothesis is provided by value of b1
+  - If b1 is different from zero than we have evidence against null hypothesis.
+  - We calculate the probability of obtaining a value of b1 as large as we have calculated if the null hypothesis were true. This probability is known as the “P-value”.
+```R
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)
+(Intercept) 12.525647   0.199232   62.87   <2e-16 ***
+City        -0.220970   0.008878  -24.89   <2e-16 ***
+---
+Signif. codes:  0 *** 0.001 ** 0.01 * 0.05 . 0.1   1
+
+Residual standard error: 0.4703 on 132 degrees of freedom
+Multiple R-squared: 0.8244,     Adjusted R-squared: 0.823
+F-statistic: 619.5 on 1 and 132 DF,  p-value: < 2.2e-16
+```
+  - From above P-value is 2 X 10^-16 which indicates that probablity of null hypothesis being true is very low and hence we can reject the null hypothesis. 
+  - To provide the interval for b1, we can use confidence levels
+```R
+ confint(fit,level=0.95)
+                 2.5 %     97.5 %
+(Intercept) 12.1315464 12.9197478
+City        -0.2385315 -0.2034092
+```
+  - In this case b1 is in [-0.238 , -0.203] range for 95% confidence interval
+  - 
+  - 
