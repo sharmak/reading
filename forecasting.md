@@ -144,6 +144,7 @@ Evaluating Regression Model
   - R^2 has value between 0 and 1.
   - Validating a model’s out-of-sample forecasting performance is much better than measuring the in-sample R2 value.
   - Standard error of regression is the standard dievation the residuals. 
+  
 Forecasting with Linear Regression
 ----------------------------------
   - We have following equation y = b0*x + b1 
@@ -180,5 +181,4 @@ F-statistic: 619.5 on 1 and 132 DF,  p-value: < 2.2e-16
 City        -0.2385315 -0.2034092
 ```
   - In this case b1 is in [-0.238 , -0.203] range for 95% confidence interval
-  - 
-  - 
+
