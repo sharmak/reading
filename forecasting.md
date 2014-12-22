@@ -182,3 +182,10 @@ City        -0.2385315 -0.2034092
 ```
   - In this case b1 is in [-0.238 , -0.203] range for 95% confidence interval
 
+Non Linear Functional Form
+---------------------------
+  - We assume that data is related linearly related
+  - Tranformation of x or y series  leads to linear relationship with better fit
+  - log-log transformation
+    - log(y(i)) = b0+ b1* log(x(i)) + error(i)
+    - the a
