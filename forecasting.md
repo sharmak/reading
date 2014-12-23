@@ -189,8 +189,14 @@ Non Linear Functional Form
   - log-log transformation
     - log(y(i)) = b0+ b1* log(x(i)) + error(i)
     - the slope b1 here refers to  elasticity i.e. average percentage change in y from 1% change in x
+    - Why log difference are equal to percentage change ?
+      - Let's say we have x and it change by r percentage so new value is x(1+r) 
+      - log(x(1+r)) = log(x) + log(1+r) = log(x) + r (becasue log(1+r) = r by taylor series)
+      - log(x(1+r)) - log(x) = r ie. percentage difference
+    -  the log transformation converts the exponential growth pattern to a linear growth pattern, and it simultaneously converts the multiplicative (proportional-variance) seasonal pattern to an additive (constant-variance) seasonal pattern
+
   
 | Model         | Functional Form |   Slope          | Elasticity  |
 | ------------- |:-------------:| -----:| ---------: | 
 | Linear  | y(i) = b1 * x(i) + b0 | b1 | b1 * x / y | 
-| Log Linear | log(y(i)) = b1 * log(x(i)) + b0 |     | b1 | 
+| Log Linear | log(y(i)) = b1 * log(x(i)) + b0 |     | b1* y / x | b1 |  
