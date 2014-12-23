@@ -188,4 +188,7 @@ Non Linear Functional Form
   - Tranformation of x or y series  leads to linear relationship with better fit
   - log-log transformation
     - log(y(i)) = b0+ b1* log(x(i)) + error(i)
-    - the a
+    - the slope b1 here refers to  elasticity i.e. average percentage change in y from 1% change in x
+  - | Model   | Functional Form | Slope | Elasticity|
+    |---------|-----------------|-------|-----------|
+    | Linear  | y(i) = b1 * x(i) + b0 | b1 | b1 * y / x |  
