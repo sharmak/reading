@@ -199,4 +199,24 @@ Non Linear Functional Form
 | Model         | Functional Form |   Slope          | Elasticity  |
 | ------------- |:-------------:| -----:| ---------: | 
 | Linear  | y(i) = b1 * x(i) + b0 | b1 | b1 * x / y | 
-| Log Linear | log(y(i)) = b1 * log(x(i)) + b0 |     | b1* y / x | b1 |  
+| Log Linear | log(y(i)) = b1 * log(x(i)) + b0 |   b1 * y / x  | b1 |
+
+Regression with time series data
+---------------------------------
+  - Biggest problem with time series data is that we don't have forecast for predictor varaibles
+  - Scenario based forecasting (e.g. based on 1% increase in x, we will have following forecast)
+    - We are assuming predictor variable for future
+  - Ex-Ante Forecast
+    - These forecast are made using only the informaton that is available in advance
+    - e.g. the forecast for 2015 will only use the data which is available till today( dec 23, 2014)
+    - These are genuine forecast
+  - Ex-Post Forecast
+    - They make use of later information about the predictor variables
+    - These are not genuine forecast 
+  - Residual Auto correlation
+    - With time series data it is highly likely that the value of a variable observed in the current time period will be influenced by its value in the previous period, or even the period before that, and so on.
+    - Therefore when fitting a regression model to time series data, it is very common to find autocorrelation in the residuals
+    - Plot ACF for the residuals
+  - Spurious Regressions
+    - More often than not, time series data are “non-stationary”; that is, the values of the time series do not fluctuate around a constant mean or with a constant variance.
+    - Regressing non-stationary time series can lead to spurious regressions. High R^2 and high residual autocorrelation can be signs of spurious regression
