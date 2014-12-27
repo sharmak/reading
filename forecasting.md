@@ -219,4 +219,39 @@ Regression with time series data
     - Plot ACF for the residuals
   - Spurious Regressions
     - More often than not, time series data are “non-stationary”; that is, the values of the time series do not fluctuate around a constant mean or with a constant variance.
-    - Regressing non-stationary time series can lead to spurious regressions. High R^2 and high residual autocorrelation can be signs of spurious regression
+    - Regressing non-stationary time series can lead to spurious regressions. High R^2 and high residual autocorrelation can be signs of spurious regression.
+    
+
+Multiple Linear Regression
+--------------------------
+  - In multiple linear regression we have multiple predictor variables and one 
+  - y(i) = b0 + b1*x1(i) + b2 * x2(i) + b3 * x3(i) + error(i)
+    - y(i) is the forecast variable 
+    - x1, x2, x3 are predictor variables
+    - b1, b3, b3 measure the effect of predictor variable on forecast variable taking into account of other predictor variables. 
+    - 
+    - error is the error term in the regression
+  - Errors shouldd have following properties
+    - Errors should have mean zero
+    - Errors should be uncorrelated with each other
+    - Errors should be un-correlated with predictor variable
+  - Estimation of model
+    - We choose the values of b1, b2, bn so that sum of the squares of error is minimized
+    - error is defined as difference between original value and fitted value.
+```R
+Coefficients:
+             Estimate Std. Error t value  P value
+(Intercept)    -0.219      5.231   -0.04   0.9667
+log.savings    10.353      0.612   16.90  < 2e-16
+log.income      5.052      1.258    4.02  6.8e-05
+log.address     2.667      0.434    6.14  1.7e-09
+log.employed    1.314      0.409    3.21   0.0014
+
+Residual standard error: 10.16 on 495 degrees of freedom
+Multiple R-squared: 0.4701, Adjusted R-squared: 0.4658
+F-statistic: 109.8 on 4 and 495 DF,  p-value: < 2.2e-16 
+```
+  - In the above examole b1 = 10.353, b2 = 5.052, b3 = 2.667, b4 = 1.314
+  - Standard Error gives the measure of uncertainity in the estimation of b(i)
+  - "t value" is the ratio of a b coefficient to its standard error
+  - "p-value": the probability of the estimated b coefficient being as large as it is if there was no real relationship between the forecast and the predictor
