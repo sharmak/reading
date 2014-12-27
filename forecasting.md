@@ -251,7 +251,10 @@ Residual standard error: 10.16 on 495 degrees of freedom
 Multiple R-squared: 0.4701, Adjusted R-squared: 0.4658
 F-statistic: 109.8 on 4 and 495 DF,  p-value: < 2.2e-16 
 ```
-  - In the above examole b1 = 10.353, b2 = 5.052, b3 = 2.667, b4 = 1.314
-  - Standard Error gives the measure of uncertainity in the estimation of b(i)
-  - "t value" is the ratio of a b coefficient to its standard error
-  - "p-value": the probability of the estimated b coefficient being as large as it is if there was no real relationship between the forecast and the predictor
+    - In the above examole b1 = 10.353, b2 = 5.052, b3 = 2.667, b4 = 1.314
+    - Standard Error gives the measure of uncertainity in the estimation of b(i)
+    - "t value" is the ratio of a b coefficient to its standard error
+    - "p-value": the probability of the estimated b coefficient being as large as it is if there was no real relationship between the forecast and the predictor 
+  - R Square
+    - R square is the square of correlation between acutal and fitted values
+    - R square can also be interpreted as the varition in the forecast values explained by the model
