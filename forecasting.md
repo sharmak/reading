@@ -257,3 +257,45 @@ F-statistic: 109.8 on 4 and 495 DF,  p-value: < 2.2e-16
   - R Square
     - R square is the square of correlation between acutal and fitted values
     - R square can also be interpreted as the varition in the forecast values explained by the model
+
+- Useful Predictors
+  - Dummy variables
+    - Catagorical variables take eithe value 1 or 0 
+    - for example, when forecasting credit scores and you want to take account of whether the customer is in full-type employment. So the predictor takes value "yes" when the customer is in full-time employment, and "no" otherwise.
+    - A dummy variable is also known as an "indicator variable
+  - Seasonal Dummy Variable
+    - For example, suppose we are forecasting daily electricity demand and we want to account for the day of the week as a predictor
+    - The interpretation of each of the coefficients associated with the dummy variables is that it is a measure of the effect of that category relative to the omitted category. 
+    - In the above example, the coefficient associated with Monday will measure the effect of Monday compared to Sunday on the forecast variable.
+  - Outliers
+    - If there is an outlier in the data, rather than omit it, you can use a dummy variable to remove its effect.
+    - In this case, the dummy variable takes value one for that observation and zero everywhere else.
+  - Public Holidays
+    - For daily data, the effect of public holidays can be accounted for by including a dummy variable predictor taking value one on public holidays and zero elsewhere.
+  - Easter
+    - Easter is different from most holidays because it is not held on the same date each year and the effect can last for several days. 
+    - In this case, a dummy variable can be used with value one where any part of the holiday falls in the particular time period and zero otherwise.
+    - For example, with monthly data, when Easter falls in March then the dummy variable takes value 1 in March, when it falls in April, the dummy variable takes value 1 in April, and when it starts in March and finishes in April, the dummy variable takes value 1 for both months.
+  - Austrialian Beer Forecast
+    - We can model the Australian beer production data using a regression model with a linear trend and quarterly dummy variables:
+    - yt=β0+β1t+β2d2,t+β3d3,t+β4d4,t+et,
+      - here di,t=1 if t is in quarter i and 0 otherwise. 
+      - The first quarter variable has been omitted
+      - the coefficients associated with the other quarters are measures of the difference between those quarters and the first quarter.
+    ```R
+    Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 441.8141     4.5338  97.449  < 2e-16
+trend        -0.3820     0.1078  -3.544 0.000854
+season2     -34.0466     4.9174  -6.924 7.18e-09
+season3     -18.0931     4.9209  -3.677 0.000568
+season4      76.0746     4.9268  15.441  < 2e-16
+
+Residual standard error: 13.01 on 51 degrees of freedom
+Multiple R-squared: 0.921,  Adjusted R-squared: 0.9149
+    ```
+      - there is a strong downward trend of 0.382 megalitres per quarter
+      - On average, the second quarter has production of 34.0 megalitres lower than the first quarter
+      - the third quarter has production of 18.1 megalitres lower than the first quarter,
+      - fourth quarter has production 76.1 megalitres higher than the first quarter.
+      - The model explains 92.1% of the variation in the beer production data.
