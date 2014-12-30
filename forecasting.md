@@ -228,8 +228,7 @@ Multiple Linear Regression
   - y(i) = b0 + b1*x1(i) + b2 * x2(i) + b3 * x3(i) + error(i)
     - y(i) is the forecast variable 
     - x1, x2, x3 are predictor variables
-    - b1, b3, b3 measure the effect of predictor variable on forecast variable taking into account of other predictor variables. 
-    - 
+    - measures (b1,b2,b3) show the effect of predictor variable on forecast variable taking into account of other predictor variables. 
     - error is the error term in the regression
   - Errors shouldd have following properties
     - Errors should have mean zero
