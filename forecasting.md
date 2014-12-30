@@ -276,13 +276,13 @@ F-statistic: 109.8 on 4 and 495 DF,  p-value: < 2.2e-16
     - Easter is different from most holidays because it is not held on the same date each year and the effect can last for several days. 
     - In this case, a dummy variable can be used with value one where any part of the holiday falls in the particular time period and zero otherwise.
     - For example, with monthly data, when Easter falls in March then the dummy variable takes value 1 in March, when it falls in April, the dummy variable takes value 1 in April, and when it starts in March and finishes in April, the dummy variable takes value 1 for both months.
-  - Austrialian Beer Forecast
-    - We can model the Australian beer production data using a regression model with a linear trend and quarterly dummy variables:
-    - yt=β0+β1t+β2d2,t+β3d3,t+β4d4,t+et,
-      - here di,t=1 if t is in quarter i and 0 otherwise. 
-      - The first quarter variable has been omitted
-      - the coefficients associated with the other quarters are measures of the difference between those quarters and the first quarter.
-    ```R
+- Austrialian Beer Forecast
+  - We can model the Australian beer production data using a regression model with a linear trend and quarterly dummy variables:
+  - yt=β0+β1t+β2d2,t+β3d3,t+β4d4,t+et,
+    - here di,t=1 if t is in quarter i and 0 otherwise. 
+    - The first quarter variable has been omitted
+    - the coefficients associated with the other quarters are measures of the difference between those quarters and the first quarter.
+  ```R
     Coefficients:
             Estimate Std. Error t value Pr(>|t|)    
 (Intercept) 441.8141     4.5338  97.449  < 2e-16
@@ -293,9 +293,9 @@ season4      76.0746     4.9268  15.441  < 2e-16
 
 Residual standard error: 13.01 on 51 degrees of freedom
 Multiple R-squared: 0.921,  Adjusted R-squared: 0.9149
-    ```
-      - there is a strong downward trend of 0.382 megalitres per quarter
-      - On average, the second quarter has production of 34.0 megalitres lower than the first quarter
-      - the third quarter has production of 18.1 megalitres lower than the first quarter,
-      - fourth quarter has production 76.1 megalitres higher than the first quarter.
-      - The model explains 92.1% of the variation in the beer production data.
+  ```
+    - there is a strong downward trend of 0.382 megalitres per quarter
+    - On average, the second quarter has production of 34.0 megalitres lower than the first quarter
+    - the third quarter has production of 18.1 megalitres lower than the first quarter,
+    - fourth quarter has production 76.1 megalitres higher than the first quarter.
+    - The model explains 92.1% of the variation in the beer production data.
