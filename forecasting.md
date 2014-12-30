@@ -299,3 +299,8 @@ Multiple R-squared: 0.921,  Adjusted R-squared: 0.9149
     - the third quarter has production of 18.1 megalitres lower than the first quarter,
     - fourth quarter has production 76.1 megalitres higher than the first quarter.
     - The model explains 92.1% of the variation in the beer production data.
+- Intervention variables
+  - When the effect lasts only for one period, we use a spike variable. This is a dummy variable taking value one in the period of the intervention and zero elsewhere.
+  - Spike variable is similar to dummy variable for outlier
+  - A step variable takes value zero before the intervention and one from the time of intervention onwards.
+  - Another form of permanent effect is a change of slope. Here the intervention is handled using a piecewise linear trend 
