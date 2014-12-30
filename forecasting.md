@@ -304,3 +304,10 @@ Multiple R-squared: 0.921,  Adjusted R-squared: 0.9149
   - Spike variable is similar to dummy variable for outlier
   - A step variable takes value zero before the intervention and one from the time of intervention onwards.
   - Another form of permanent effect is a change of slope. Here the intervention is handled using a piecewise linear trend 
+- Selecting Predictor
+  - It is hard to choose between various predictor variable
+  - One common wrong approach is to plot the predictor variable with forecast variable and see the effect on scatterplot but this does't take into account the effect of other predictor variable.
+  - Other common wrong approach is to do a multiple linear regression on discard the predictor with disregard all variables whose p-values are greater than 0.05.
+  - statistical significance does not always indicate predictive value. Even if forecasting is not the goal, this is not a good strategy because the p-values can be misleading when two or more predictors are correlated with each other
+  - Adjusted R^2
+    - 
