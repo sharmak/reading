@@ -346,7 +346,7 @@ Multiple R-squared: 0.921,  Adjusted R-squared: 0.9149
   - suppose we have only one predictor x. Then the model we use is y = f(x) + e
   - Using linear regression, we will try to estimate y = b0 + b1*x
   - One of the simplest ways to do nonlinear regression is to make f piecewise linear. That is, we introduce points where the slope of f can change. These points are called “knots”.
-  - Piecewise linear relationships constructed in this way are a special case of regression splines
+  - Below is the example for linear spline at Knot k= 1
 ```R
 Cityp <- pmax(fuel$City-25,0)
 fit2 <- lm(Carbon ~ City + Cityp, data=fuel)
@@ -355,4 +355,11 @@ fcast2 <- forecast(fit2, newdata=data.frame(City=x,Cityp=z))
 plot(jitter(Carbon) ~ jitter(City), data=fuel)
 lines(x, fcast2$mean,col="red"
 ```
-
+  - Piecewise linear relationships constructed in this way are a special case of regression splines
+  - Below is the example for cubic spline at Knot k= 1
+```
+fit3 <- lm(Carbon ~ City + I(City^2) + I(City^3) + I(Cityp^3), data=fuel)
+fcast3 <- forecast(fit3,newdata=data.frame(City=x,Cityp=z))
+plot(jitter(Carbon) ~ jitter(City), data=fuel)
+lines(x, fcast3$mean,col="red")
+```
