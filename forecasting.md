@@ -310,4 +310,8 @@ Multiple R-squared: 0.921,  Adjusted R-squared: 0.9149
   - Other common wrong approach is to do a multiple linear regression on discard the predictor with disregard all variables whose p-values are greater than 0.05.
   - statistical significance does not always indicate predictive value. Even if forecasting is not the goal, this is not a good strategy because the p-values can be misleading when two or more predictors are correlated with each other
   - Adjusted R^2
-    - 
+    - Imagine a model which produces forecasts that are exactly 20% of the actual values. In that case, the R^2 value would be 1 (indicating perfect correlation), but the forecasts are not very close to the actual values.
+    - R^2 does not allow for "degrees of freedom''. Adding any variable tends to increase the value of R2, even if that variable is irrelevant
+    - An equivalent idea is to select the model which gives the minimum sum of squared errors (SSE),
+    - Minimizing the SSE is equivalent to maximizing R2 and will always choose the model with the most variables, and so is not a valid way of selecting predictors.
+    - ![equation]( \sum_a^b x )
