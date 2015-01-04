@@ -342,6 +342,17 @@ Multiple R-squared: 0.921,  Adjusted R-squared: 0.9149
     - If there is no autocorrelation, the Durbin-Watson distribution is symmetric around 2.
     - A small p-value indicates there is significant autocorrelation remaining in the residuals. 
   - Histogram of residuals
- 
-
+ - Non Linear Regression
+  - suppose we have only one predictor x. Then the model we use is y = f(x) + e
+  - Using linear regression, we will try to estimate y = b0 + b1*x
+  - One of the simplest ways to do nonlinear regression is to make f piecewise linear. That is, we introduce points where the slope of f can change. These points are called “knots”.
+  - Piecewise linear relationships constructed in this way are a special case of regression splines
+```R
+Cityp <- pmax(fuel$City-25,0)
+fit2 <- lm(Carbon ~ City + Cityp, data=fuel)
+x <- 15:50; z <- pmax(x-25,0)
+fcast2 <- forecast(fit2, newdata=data.frame(City=x,Cityp=z))
+plot(jitter(Carbon) ~ jitter(City), data=fuel)
+lines(x, fcast2$mean,col="red"
+```
 
