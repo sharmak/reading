@@ -363,3 +363,21 @@ fcast3 <- forecast(fit3,newdata=data.frame(City=x,Cityp=z))
 plot(jitter(Carbon) ~ jitter(City), data=fuel)
 lines(x, fcast3$mean,col="red")
 ```
+- Correlation, causation and forecasting
+  - Correlation is not causation
+    -  Variable x may be useful for predicting a variable y, but that does not mean x is causing y. 
+    -  It is possible that x is causing y, but it may be that the relationship between them is more complicated than simple causality.
+    -  It is important to understand that correlations are useful for forecasting, even when there is no causal relationship between the two variables.
+    -  We say two variables are confounded when their effects on the forecast variable cannot be separated.
+    -  Any pair of correlated predictors will have some level of confounding, but we would not normally describe them as confounded unless there was a relatively high level of correlation between them.
+    -  Confounding is not really a problem for forecasting, as we can still compute forecasts without needing to separate out the effects of the predictors. 
+    -  However, it becomes a problem with scenario forecasting as the scenarios should take account of the relationships between predictors.
+  - Multicollinearity and forecasting
+    - A closely related issue is multicollinearity which occurs when similar information is provided by two or more of the predictor variables in a multiple regression. It can occur in a number of ways.
+      - Two predictors are highly correlated with each other (that is, they have a correlation coefficient close to +1 or -1).
+      - A linear combination of predictors is highly correlated with another linear combination of predictors. 
+    - Consequences
+      - If there is perfect correlation (i.e., a correlation of +1 or -1, such as in the dummy variable trap), it is not possible to estimate the regression model.
+      - If there is high correlation (close to but not equal to +1 or -1), then the estimation of the regression coefficients is computationally difficult. In fact, some software (notably Microsoft Excel) may give highly inaccurate estimates of the coefficients
+      - The uncertainty associated with individual regression coefficients will be large. This is because they are difficult to estimate. Consequently, statistical tests (e.g., t-tests) on regression coefficients are unreliable.
+      - Forecasts will be unreliable if the values of the future predictors are outside the range of the historical values of the predictors.
