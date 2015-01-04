@@ -334,6 +334,14 @@ Multiple R-squared: 0.921,  Adjusted R-squared: 0.9149
  - Residual Diagnostic 
   - The residuals from a regression model are calculated as the difference between the actual values and the fitted values: ei=yi−y^i. 
   - Each residual is the unpredictable component of the associated observation.
+  - Scatterplots of residuals against predictors
+  - Scatterplot of residuals against fitted values
+  - Autocorrelation in the residuals
+    - you should look at an ACF plot of the residuals. This will reveal if there is any autocorrelation in the residuals (suggesting that there is information that has not been accounted for in the model).
+    - Durbin-Watson test is used to test the hypothesis that there is no lag one autocorrelation in the residuals.
+    - If there is no autocorrelation, the Durbin-Watson distribution is symmetric around 2.
+    - A small p-value indicates there is significant autocorrelation remaining in the residuals. 
+  - Histogram of residuals
  
 
 
