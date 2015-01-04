@@ -331,7 +331,9 @@ Multiple R-squared: 0.921,  Adjusted R-squared: 0.9149
     - Corrected Akaike's Information Criterion
     - Schwarz Bayesian Information Criterion
  - The model with all four predictors has the lowest CV, AIC, AICc and BIC values and the highest R^2 value
- 
+ - Residual Diagnostic 
+  - The residuals from a regression model are calculated as the difference between the actual values and the fitted values: ei=yi−y^i. 
+  - Each residual is the unpredictable component of the associated observation.
  
 
 
