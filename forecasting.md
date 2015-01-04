@@ -314,4 +314,24 @@ Multiple R-squared: 0.921,  Adjusted R-squared: 0.9149
     - R^2 does not allow for "degrees of freedom''. Adding any variable tends to increase the value of R2, even if that variable is irrelevant
     - An equivalent idea is to select the model which gives the minimum sum of squared errors (SSE),
     - Minimizing the SSE is equivalent to maximizing R2 and will always choose the model with the most variables, and so is not a valid way of selecting predictors.
-    - ![equation]( \sum_a^b x )
+    - Adjusted R^2 is SSE/(n-k-1)  
+      - n  no of observations
+      - k  no of predictors
+    - Adjusted R^2 no longer increase with each added variable 
+- Cross Validation
+  - Cross-validation is a very useful way of determining the predictive ability of a model.
+  - Leave-one-out cross-validation
+    - Remove observation i from the data set, and fit the model using the remaining data. 
+    - Compute the error (e∗i=yi−y^i) for the omitted observation. (This is not the same as the residual because the ith observation was not used in estimating the value of y^i.)
+    - Repeat step 1 for i=1,…,N.
+    - Compute the MSE from e∗1,…,e∗N. We shall call this the CV.
+    - Under this criterion, the best model is the one with the smallest value of CV.
+ - Other criteria's 
+    - Akaike's Information Criterion
+    - Corrected Akaike's Information Criterion
+    - Schwarz Bayesian Information Criterion
+ - The model with all four predictors has the lowest CV, AIC, AICc and BIC values and the highest R^2 value
+ 
+ 
+
+
